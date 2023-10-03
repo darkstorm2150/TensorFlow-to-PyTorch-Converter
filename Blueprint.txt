@@ -1,0 +1,71 @@
+GitHub repository structure
+
+```
+TensorFlow-to-PyTorch-Converter/
+│
+├── src/
+│   ├── main.cpp              # Entry point for the program
+│   ├── tensorflow_loader/    # Directory containing utility functions to load TensorFlow models
+│   │   ├── tf_loader.cpp
+│   │   └── tf_loader.h
+│   │
+│   ├── pytorch_saver/        # Directory containing utility functions to save PyTorch models
+│   │   ├── pt_saver.cpp
+│   │   └── pt_saver.h
+│   │
+│   ├── converter/            # Directory containing core conversion logic
+│   │   ├── converter.cpp
+│   │   └── converter.h
+│   │
+│   ├── utils/                # Directory containing various utility functions, error handling, etc.
+│   │   ├── file_utils.cpp
+│   │   ├── file_utils.h
+│   │   ├── error_handling.cpp
+│   │   └── error_handling.h
+│   │
+│   └── cli/                  # Command line interface utilities
+│       ├── cli_parser.cpp
+│       └── cli_parser.h
+│
+├── tests/                    # Test cases to ensure the program's functionality
+│   ├── test_converter.cpp
+│   └── ...
+│
+├── models/                   # Sample models for testing
+│   ├── sample_tf_model.pb
+│   └── ...
+│
+├── CMakeLists.txt            # CMake configuration file for building the program
+│
+├── README.md                 # Documentation on how to use and contribute to the program
+│
+├── LICENSE                   # License information for the repository
+│
+└── .gitignore                # Git ignore file to exclude certain files/directories from version control
+```
+
+Here's a brief description of the components:
+
+- **main.cpp**: This is the entry point for the program. It handles CLI arguments and orchestrates the conversion process.
+  
+- **tensorflow_loader/**: Contains functions to load TensorFlow models and extract their architecture and weights.
+
+- **pytorch_saver/**: Contains functions to save the converted PyTorch model to disk.
+
+- **converter/**: Contains the core logic for converting the model's architecture and transferring weights.
+
+- **utils/**: Various utility functions, including file operations and error handling.
+
+- **cli/**: Functions and utilities related to parsing and handling command line arguments.
+
+- **tests/**: Contains test cases. It's essential to rigorously test the program to ensure accurate conversions.
+
+- **models/**: Contains sample TensorFlow models for testing purposes.
+
+- **CMakeLists.txt**: A CMake configuration file that defines how the project should be built.
+
+- **README.md**: Documentation for users and contributors.
+
+- **LICENSE**: License information for your project. 
+
+- **.gitignore**: Specifies files and directories that should be ignored by Git.
