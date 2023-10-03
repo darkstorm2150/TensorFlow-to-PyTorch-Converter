@@ -1,6 +1,8 @@
 #ifndef PT_SAVER_H
 #define PT_SAVER_H
 
+#include <string>
+
 struct PyTorchModel {
     // Placeholder for PyTorch model data
 };
